@@ -11,8 +11,10 @@ def play_selfplay_games(model_eval, n_games=50, sims=400, temp_moves=30,
     model_eval: callable([N,C,8,8]) -> (policy_logits [N,4096], values [N]) returning numpy
     Returns list of (state_tensor, pi (4096,), z) tuples.
     """
-    random.seed(seed); np.random.seed(seed)
+    random.seed(seed)
+    np.random.seed(seed)
     games_data = []
+    
     for _ in trange(n_games, desc="Self-play"):
         board = chess.Board()
         trajectory = []  # list of (state, pi, player)

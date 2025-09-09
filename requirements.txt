@@ -1,8 +1,19 @@
+# Core chess engine dependencies
 python-chess==1.999
+
+# Deep learning framework
+torch>=2.0,<2.3
+torchvision>=0.15,<0.18
+
+# Reinforcement learning environment
 gymnasium==0.29.1
-torch>=2.0
-torchvision>=0.15
-onnx>=1.14
-onnxruntime>=1.15
-tqdm>=4.65
-numpy>=1.24,<2
+
+# Neural network export and inference
+onnx>=1.14,<2.0
+onnxruntime>=1.15,<2.0
+
+# Utilities
+tqdm>=4.65,<5.0
+numpy>=1.24,<2.0
+
+# onnxsim>=0.4.30
